@@ -1,0 +1,328 @@
+@import url('../fonts/Mason Chronicles/stylesheet.css');
+
+*, *:before, *:after { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: 'Roboto';
+    color: #FFFFFF;
+
+    background-color: #141218;
+    background-image:
+        /* linear-gradient(180deg, rgba(20, 18, 24, 0) 59.28%, #141218 100%),
+        linear-gradient(270deg, #141218 3.38%, rgba(20, 18, 24, 0) 10.43%),
+        linear-gradient(179.45deg, #141218 0.55%, rgba(20, 18, 24, 0) 8.71%),
+        radial-gradient(64.78% 125.62% at 72.8% 56.48%, rgba(20, 18, 24, 0.33) 19.93%, #141218 100%), */
+        url('../resources/background.jpg');
+    background-position: top right 20%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 95%;
+
+    /* border: 1px solid red; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+
+.header-logo {
+    display: block;
+}
+.logo {
+    display: block;
+}
+
+.header-menu {
+    display: flex;
+    margin-left: 68px;
+    margin-right: auto;
+}
+.menu-item {
+    margin: 0 24px 0 0;
+
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 20px;
+
+    text-decoration: none;
+}
+.social-item:first-child {
+    margin-left: 0;
+}
+
+.header-burger {
+    display: none;
+}
+
+.main {
+    margin-bottom: 100px;
+}
+.content {
+    position: relative;
+    margin-bottom: 85px;
+}
+
+.genre {
+    display: block;
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.rating {
+    display: flex;
+    animation-delay: 0.1s;
+
+}
+.rating-stars {
+    display: flex;
+    margin-right: 10px;
+}
+.star {
+    margin-right: 4px;
+}
+.star:last-child {
+    margin-right: 0;
+}
+.rating-number {
+    font-size: 12px;
+}
+
+.title {
+    margin: 10px 0;
+    padding: 0;
+
+    font-family: 'Mason Chronicles';
+    font-weight: 500;
+    font-size: 76px;
+    /* line-height: 89px; */
+    animation-delay: 0.2s;
+}
+.description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    max-width: 458px;
+
+    font-size: 14px;
+    line-height: 150%;
+    animation-delay: 0.3s;
+}
+
+.button {
+    display: inline-block;
+    margin: 0;
+    padding: 22px 72px;
+
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #FFFFFF;
+
+    background-color: #9D2929;
+    border: none;
+    border-radius: 8px;
+
+    outline: none;
+    animation-delay: 0.4s;
+}
+.button:active {
+    color: #FFFFFF;
+}
+
+.button-play {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    top: calc(50% - (132px / 2));
+    right: 22%;
+    width: 100px;
+    height: 100px;
+
+    background-color: #9D2929;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+
+    outline: none;
+}
+.button-play::after {
+    content: '';
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    top: -16px;
+    left: -16px;
+
+    background-color: #9D2929;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.5;
+
+    outline: none;
+    z-index: 99;
+
+    animation: pulse 0.5s ease-in-out 1s infinite;
+}
+.button-play img {
+    position: relative;
+    z-index: 100;
+    transform: translateX(3px);
+}
+
+.swiper-container {
+    margin-left: 0;
+    max-width: 390px;
+}
+.series {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 20px;
+    padding: 13px;
+    width: 164px;
+    height: 113px;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+.card-subtitle {
+    margin: 0;
+    margin-bottom: 2px;
+
+    font-size: 10px;
+    line-height: 12px;
+}
+.card-title {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.series-1 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-1.jpg');
+}
+.series-2 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-2.jpg');
+}
+.series-3 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-3.jpg');
+}
+.series-4 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-4.jpg');
+}
+.series-5 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-5.jpg');
+}
+.series-6 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-6.jpg');
+}
+.series-7 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-7.jpg');
+}
+.series-8 {
+    background-image:
+        linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%),
+        url('../resources/series/series-8.jpg');
+}
+
+.arrow {
+    position: absolute;
+    top: calc(50% - 24 / 2);
+    right: 32px;
+    width: 32px;
+    height: 23px;
+
+    background-color: transparent;
+    background-image: url('../resources/arrow.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+
+    outline: none;
+    z-index: 50;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 20px 0;
+
+    opacity: 0.4;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 20px;
+}
+.link {
+    margin-left: 25px;
+
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 20px;
+    color: #FFFFFF;
+}

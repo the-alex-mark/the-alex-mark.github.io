@@ -1,0 +1,182 @@
+*, *:before, *:after { box-sizing: border-box; }
+.modal {
+	/* Настройка цветовой палитры Modal Dialog */
+	--modal-color-wrapper-background: rgba(46, 49, 65, 0.8);
+	--modal-color-content-background: #4C5C96;
+	--modal-color-close: rgba(255, 255, 255, 0.6);
+	--modal-color-close-hover: #FFFFFF;
+	
+	/* Другие настройки */
+	--modal-padding-wrapper: 30px;
+	--modal-padding-content: 15px;
+	--modal-border-radius-dialog: 6px;
+}
+
+.modal.modal-sm .modal-dialog { max-width: 320px; }
+.modal.modal-md .modal-dialog { max-width: 780px; }
+.modal.modal-lg .modal-dialog { max-width: 1140px; }
+.modal.modal-fluid .modal-dialog { max-width: 100%; }
+
+.modal.modal-top .modal-dialog { margin: 0 0 auto 0; }
+.modal.modal-centered .modal-dialog { margin: auto 0; }
+.modal.modal-bottom .modal-dialog { margin: auto 0 0 0; }
+
+.modal.modal-scrollable .modal-dialog { max-height: 100%; }
+.modal.modal-scrollable .modal-dialog .modal-content { max-height: 100%; overflow-x: hidden; overflow-y: auto; }
+
+body.modal-open {
+	height: 100%;
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.modal-wrapper {
+	visibility: hidden;
+	position: fixed;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+			flex-direction: column;
+	-webkit-box-align: center;
+	        align-items: center;
+	margin: 0;
+	padding: var(--modal-padding-wrapper, 30px);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	
+	background-color: var(--modal-color-wrapper-background, rgba(0, 0, 0, 0.8));
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: painted;
+	z-index: 900;
+}
+
+.modal-wrapper-close {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	right: -34px;
+	height: 100%;
+
+	background-color: transparent;
+}
+.modal-close {
+	position: -webkit-sticky;
+	position: sticky;
+	padding: 0;
+	margin: 0;
+	width: 30px;
+	top: 0;
+	font-size: 28px;
+	color: var(--modal-color-close, rgba(255, 255, 255, 0.6));
+	
+	background-color: transparent;
+	border: none;
+	outline: none;
+	
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.modal-close:hover {
+	color: var(--modal-color-close-hover, rgb(255, 255, 255));
+	background-color: transparent;
+}
+
+.modal-dialog {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	max-width: 1140px;
+	width: 100%;
+	
+	background-color: var(--modal-color-content-background, rgb(255, 255, 255));
+	border-radius: var(--modal-border-radius-dialog, 6px);
+}
+
+.modal-content {
+	padding: var(--modal-padding-content, 15px);
+}
+
+.modal.show {
+	visibility: visible;
+	opacity: 1;
+}
+.modal.show .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+
+.fade {
+	-webkit-transition: all ease .3s;
+	transition: all ease .3s;
+}
+.fade .modal-dialog {
+	transition: -webkit-transform 0.3s ease-out;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+	transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	-webkit-transform: translate(0, -50px);
+	transform: translate(0, -50px);
+}
+
+/* Extra large */
+@media (min-width: 1240px) {
+	.modal-dialog { max-width: 1140px; }
+	.modal.modal-sm .modal-dialog { max-width: 320px; }
+	.modal.modal-md .modal-dialog { max-width: 780px; }
+	.modal.modal-lg .modal-dialog { max-width: 1140px; }
+}
+
+/* Small */
+@media (min-width: 992px) and (max-width: 1240px) {
+	.modal-dialog { max-width: 780px; }
+	.modal.modal-sm .modal-dialog { max-width: 320px; }
+	.modal.modal-md .modal-dialog { max-width: 780px; }
+	.modal.modal-lg .modal-dialog { max-width: 780px; }
+}
+
+/* Medium */
+@media (min-width: 768px) and (max-width: 992px) {
+	.modal-dialog { max-width: 540px; }
+	.modal.modal-sm .modal-dialog { max-width: 320px; }
+	.modal.modal-md .modal-dialog { max-width: 540px; }
+	.modal.modal-lg .modal-dialog { max-width: 540px; }
+}
+
+/* Small */
+@media (min-width: 640px) and (max-width: 768px) {
+	.modal-dialog { max-width: 540px; }
+	.modal.modal-sm .modal-dialog { max-width: 320px; }
+	.modal.modal-md .modal-dialog { max-width: 540px; }
+	.modal.modal-lg .modal-dialog { max-width: 540px; }
+}
+
+/* Extra small */
+@media (max-width: 640px) {
+	.modal-wrapper { padding: 0; }
+	.modal-dialog { border-radius: 0; }
+	.modal-content { min-height: 100vh; }
+	.modal-wrapper-close { display: none; }
+
+	.modal-dialog { max-width: 100%; }
+	.modal.modal-sm .modal-dialog { max-width: 100%; }
+	.modal.modal-md .modal-dialog { max-width: 100%; }
+	.modal.modal-lg .modal-dialog { max-width: 100%; }
+
+	.modal.modal-top .modal-dialog { margin: 0; }
+	.modal.modal-centered .modal-dialog { margin: 0; }
+	.modal.modal-bottom .modal-dialog { margin: 0; }
+
+	.fade .modal-dialog {
+		transition: -webkit-transform 0.3s ease-out;
+		-webkit-transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+}

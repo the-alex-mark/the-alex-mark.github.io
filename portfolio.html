@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Портфолио</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="keywords" content="Александр Макаров, Личный сайт, Резюме, Программист, Разработчик, Web-Разработчик, Web, Windows">
+		<meta name="description" content="Портфолио разработчика">
+		<meta property="og:title" content="Портфолио">
+		<meta property="og:site_name" content="Личный сайт разработчика">
+		<meta property="og:description" content="Портфолио разработчика">
+		<meta property="og:image" content="resources/background.jpg">
+		
+		<!-- Подключение иконки страницы -->
+		<link rel="Shortcut Icon" href="resources/favicon.ico">
+
+		<!-- Подключение шрифтов -->
+		<link rel="stylesheet" href="fonts/Fontello/fontello.css">
+
+		<!-- Подключение плагинов -->
+		<link rel="stylesheet" href="plugins/Swiper/swiper.min.css">
+		<link rel="stylesheet" href="plugins/Magnific Popup/magnific-popup.css">
+		<link rel="stylesheet" href="plugins/Modal Dialog/modal-dialog.css">
+
+		<!-- Подключение стилей -->
+		<link rel="stylesheet" href="styles/config.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/content.css">
+		<link rel="stylesheet" href="styles/adaptive.css">
+	</head>
+	<body>
+
+		<!-- Меню -->
+		<nav id="menu" class="menu menu-wrapper">
+			<div class="menu-content">
+				<h2 class="menu-title">Меню</h2>
+				<ul class="menu-links">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="portfolio.html">Портфолио</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Модальное окно -->
+		<div id="modal" class="modal fade modal-wrapper modal-lg modal-centered">
+			<div class="modal-dialog">
+				<div class="modal-wrapper-close">
+					<button class="modal-close">&times;</button>
+				</div>
+				<div class="modal-content">
+
+				</div>
+			</div>
+		</div>
+		
+		<section class="portfolio">
+			<header class="header">
+				<a href="index.html" id="logo" class="header-logo"></a>
+				<a href="index.html" class="header-title"><h2>Портфолио</h2></a>
+				<a href="#menu" class="header-burger"><hr><hr><hr></a>
+				<nav class="header-menu">
+					<a href="index.html" class="menu-item">Главная</a>
+					<a href="portfolio.html" class="menu-item active">Портфолио</a>
+					<a href="contacts.html" class="menu-item">Контакты</a>
+				</nav>
+			</header>
+			<div class="content">
+				<div class="filter">
+					<button class="filter-item active" data-filter="*">All</button>
+					<button class="filter-item" data-filter=".web">Web</button>
+					<button class="filter-item" data-filter=".desktop">Desktop</button>
+				</div>
+				<div class="masonry col-4">
+					<figure class="block-project masonry-item web">
+						<a href="works/the-witcher/index.html" target="_blank" class="project-image-link">
+							<img src="resources/works/work-image/the-witcher.png" alt='"The Witcher"' class="project-image">
+						</a>
+						<figcaption class="project-text">
+							<h4 class="project-title">The Witcher</h4>
+							<p class="project-description">Сайт создан в рамках пройденного интенсива "The Witcher" академии вёрстки Артёма Исламова.</p>
+						</figcaption>
+						<a href="works/the-witcher/index.html" target="_blank" class="link-more project__link-more no-select">
+							<div class="icon icon-right-open"></div>
+							<div class="more-text">Подробнее</div>
+						</a>
+					</figure>
+
+					<figure class="block-project masonry-item web">
+						<a href="works/my-first-site/index.html" target="_blank" class="project-image-link">
+							<img src="resources/works/work-image/my-first-site.png" alt="My first site" class="project-image">
+						</a>
+						<figcaption class="project-text">
+							<h4 class="project-title">My first site</h4>
+							<p class="project-description">Сайт создан в рамках пройденного интенсива "Первый сайт за три дня" академии вёрстки Артёма Исламова.</p>
+						</figcaption>
+						<a href="works/my-first-site/index.html" target="_blank" class="link-more project__link-more no-select">
+							<div class="icon icon-right-open"></div>
+							<div class="more-text">Подробнее</div>
+						</a>
+					</figure>
+
+					<figure class="block-project masonry-item web">
+						<a href="works/calculating-cost-layout/index.html" target="_blank" class="project-image-link">
+							<img src="resources/works/work-image/calculating-cost-layout.png" alt="My first site" class="project-image">
+						</a>
+						<figcaption class="project-text">
+							<h4 class="project-title">Стоимость разработки сайта</h4>
+							<p class="project-description">Сайт создан в рамках пройденного интенсива "Cтоимость разработки сайта" академии вёрстки Артёма Исламова. Основной упор на знания javaScript.</p>
+						</figcaption>
+						<a href="works/calculating-cost-layout/index.html" target="_blank" class="link-more project__link-more no-select">
+							<div class="icon icon-right-open"></div>
+							<div class="more-text">Подробнее</div>
+						</a>
+					</figure>
+
+					<figure class="block-project masonry-item desktop">
+						<a data-article="questionnaire" class="project-image-link">
+							<img src="resources/works/work-image/questionnaire.png" alt="Опросник" class="project-image">
+						</a>
+						<figcaption class="project-text">
+							<h4 class="project-title">Опросник</h4>
+							<p class="project-description">Программа для проведения тестирования группы учащихся в режиме реального времени по локальной сети.</p>
+						</figcaption>
+						<a data-article="questionnaire" class="link-more project__link-more no-select">
+							<div class="icon icon-right-open"></div>
+							<div class="more-text">Подробнее</div>
+						</a>
+					</figure>
+
+					<figure class="block-project masonry-item desktop">
+						<a href="https://github.com/the-alex-mark/proglib" target="_blank" class="project-image-link">
+							<img src="resources/works/work-image/proglib.png" alt="ProgLib" class="project-image">
+						</a>
+						<figcaption class="project-text">
+							<h4 class="project-title">ProgLib</h4>
+							<p class="project-description">Многофункциональная библиотека стандарта .NET Framework, разработанная для личного использования.</p>
+						</figcaption>
+						<a href="https://github.com/the-alex-mark/proglib" target="_blank" class="link-more project__link-more no-select">
+							<div class="icon icon-right-open"></div>
+							<div class="more-text">Подробнее</div>
+						</a>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Подключение плагинов -->
+		<script src="plugins/JQuery/jquery.min.js"></script>
+		<script src="plugins/Lazy Line Painter/jquery.lazy-line-painter.min.js"></script>
+		<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+		<script src="plugins/Swiper/swiper.min.js"></script>
+		<script src="plugins/Magnific Popup/magnific-popup.min.js"></script>
+		<script src="plugins/Modal Dialog/modal-dialog.js"></script>
+
+		<!-- Подключение скриптов -->
+		<script src="./scripts/articles.js"></script>
+		<script src="./scripts/main.js"></script>
+	</body>
+</html>
