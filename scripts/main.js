@@ -92,11 +92,23 @@ document.body.addEventListener('keydown', function(e) {
         // Заполнение модального окна динамическими данными
         let elems_buttonShowArticle = document.querySelectorAll('[data-article]');
         for (let i of elems_buttonShowArticle) {
-            i.addEventListener('click', function(e) {
+            i.addEventListener('click', (e) => {
                 e.preventDefault = false;
-                MD.Set(articles[this.getAttribute('data-article')]);
+                MD.Set(articles[i.getAttribute('data-article')]);
                 MD.Show();
 
+                try {
+                    document.querySelector('.modal-back').addEventListener('click', () => {
+                        e.preventDefault = false;
+                        MD.Hide();
+                    });
+    
+                    document.querySelector('.footer-button').addEventListener('click', () => {
+                        e.preventDefault = false;
+                        MD.Hide();
+                    });
+                } catch { }
+                
                 try {
                     new Swiper('.swiper-container.article-slider', {
                         slidesPerView: 4,

@@ -1,7 +1,7 @@
 let articles = {
     'questionnaire': `
         <div class="modal-header">
-            <a onclick="MD.Hide()" class="modal-back icon-left-open"></a>
+            <a href="#" class="modal-back icon-left-open"></a>
             <h3 class="modal-title">Назад</h3>
         </div>
 
@@ -142,6 +142,6 @@ let articles = {
                 <a href="https://yadi.sk/d/yTeQdAza71SxkQ" target="_blank" title="Яндекс Диск" class="contact-link"><div class="icon icon-link"></div></a>
             </div>
 
-            <button onclick="MD.Hide()" class="button footer-button">Закрыть</button>
+            <button class="button footer-button">Закрыть</button>
         </div>`
 }
