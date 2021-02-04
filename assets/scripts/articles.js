@@ -7,7 +7,7 @@ let articles = {
 
         <div class="modal-body">
             <div class="article__header">
-                <img src="resources/works/work-image/proglib.png" alt="" class="article__header-image">
+                <img src="assets/media/works/work-image/proglib.png" alt="" class="article__header-image">
                 <div class="article__header-text">
                     <h3 class="article__header-title">Онлайн-система тестирования</h3>
 
@@ -74,8 +74,8 @@ let articles = {
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <figure class="slider-item">
-                                <a href="resources/works/work-screenshots/proglib/Screenshot_1.png" class="slider-image__wrapper popup">
-                                    <img src="resources/works/work-screenshots/proglib/Screenshot_1.png" alt="" class="slider-image">
+                                <a href="assets/media/works/work-screenshots/proglib/Screenshot_1.png" class="slider-image__wrapper popup">
+                                    <img src="assets/media/works/work-screenshots/proglib/Screenshot_1.png" alt="" class="slider-image">
                                 </a>
                                 <figcaption class="slider-text">
                                     <span class="slider-caption"></span>
@@ -85,8 +85,8 @@ let articles = {
                         </div>
                         <div class="swiper-slide">
                             <figure class="slider-item">
-                                <a href="resources/works/work-screenshots/proglib/Screenshot_2.png" class="slider-image__wrapper popup">
-                                    <img src="resources/works/work-screenshots/proglib/Screenshot_2.png" alt="" class="slider-image">
+                                <a href="assets/media/works/work-screenshots/proglib/Screenshot_2.png" class="slider-image__wrapper popup">
+                                    <img src="assets/media/works/work-screenshots/proglib/Screenshot_2.png" alt="" class="slider-image">
                                 </a>
                                 <figcaption class="slider-text">
                                     <span class="slider-caption"></span>
@@ -96,8 +96,8 @@ let articles = {
                         </div>
                         <div class="swiper-slide">
                             <figure class="slider-item">
-                                <a href="resources/works/work-screenshots/proglib/Screenshot_3.png" class="slider-image__wrapper popup">
-                                    <img src="resources/works/work-screenshots/proglib/Screenshot_3.png" alt="" class="slider-image">
+                                <a href="assets/media/works/work-screenshots/proglib/Screenshot_3.png" class="slider-image__wrapper popup">
+                                    <img src="assets/media/works/work-screenshots/proglib/Screenshot_3.png" alt="" class="slider-image">
                                 </a>
                                 <figcaption class="slider-text">
                                     <span class="slider-caption"></span>

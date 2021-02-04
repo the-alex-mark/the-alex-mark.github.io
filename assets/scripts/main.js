@@ -3,7 +3,13 @@ $(window).load(function() {
     try { document.querySelector('.filter-item').click(); } catch { }
     try { for (let i of document.querySelectorAll('.collapse-button.active')) i.click(); } catch { }
 
-    let Path = {
+    // Вывод текущего возраста
+    var age  = get_current_age('05.07.1999');
+    var word = get_string_of_number(age, [ 'год', 'года', 'лет' ]);
+    $('.age').text(age + ' ' + word);
+
+    // SVG
+    var Path = {
         "logo": {
             "strokepath": [
                 {
@@ -23,7 +29,9 @@ $(window).load(function() {
         }
     };
 
-    $($('#logo')).lazylinepainter({
+    // Анимация SVG
+    $('#logo').lazylinepainter({
+
         // Данные
         "svgData": Path,           // Объект SVG
 
@@ -242,3 +250,30 @@ try {
         return false;
     });
 } catch { }
+
+/**
+ * Вичисляет текущий возраст в зависимости от указанной даты.
+ * 
+ * @param   {Date} date Дата.
+ * @returns {number}
+ */
+function get_current_age(date) {
+    var d = date.split('.');
+    if (typeof d[2] !== "undefined") {
+        date = d[2] + '.' + d[1] + '.' + d[0];
+        return ((new Date().getTime() - new Date(date)) / (24 * 3600 * 365.25 * 1000)) | 0;
+    }
+
+    return 0;
+}
+
+/**
+ * Склоняет слова в зависимости от указанного числа.
+ * 
+ * @param   {number}   number Число.
+ * @param   {string[]} words  Список слов для склонения.
+ * @returns {string}
+ */
+function get_string_of_number(number, words) {  
+    return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]];
+}
